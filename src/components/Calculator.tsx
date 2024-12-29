@@ -1,6 +1,6 @@
 "use client";
 
-import { availablePlates, barbellWeight, Plate } from "$/lib/types";
+import { barbellWeight, Plate } from "$/lib/types";
 import { Input } from "@nextui-org/react";
 import { useState } from "react";
 import Plates from "./Plates";
@@ -9,6 +9,15 @@ import toast from "react-hot-toast";
 export default function Calculator() {
     const [targetWeight, setTargetWeight] = useState<string>('');
     const [plates, setPlates] = useState<Plate[]>([]);
+
+    const availablePlates: Plate[] = [
+        { weight: 25, classes: 'bg-plate-red' },
+        { weight: 20, classes: 'bg-plate-blue' },
+        { weight: 15, classes: 'bg-plate-yellow' },
+        { weight: 10, classes: 'bg-plate-green' },
+        { weight: 5, classes: 'bg-plate-white' },
+        { weight: 2.5, classes: 'bg-plate-black' },
+    ]
 
     function calculatePlates(weight: number) {
         if (weight < barbellWeight) {
