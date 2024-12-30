@@ -17,6 +17,7 @@ export default function Calculator() {
         { weight: 10, classes: 'bg-plate-green' },
         { weight: 5, classes: 'bg-plate-white' },
         { weight: 2.5, classes: 'bg-plate-black' },
+        { weight: 1.25, classes: 'bg-plate-black plate-eighth' },
     ]
 
     function calculatePlates(weight: number) {
@@ -30,8 +31,8 @@ export default function Calculator() {
             return;
         }
     
-        if (weight % 2.5 !== 0) {
-            toast.error("Weight must be in increments of 2.5kg");
+        if (weight % 1.25 !== 0) {
+            toast.error("Weight must be in increments of 1.25kg");
             return;
         }
     

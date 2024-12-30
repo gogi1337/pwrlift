@@ -26,6 +26,7 @@ export default function Plates({ plates }: Props) {
                         plate.classes.includes("bg-plate-white") ? 'text-black' : 'text-white',
                         plate.classes.includes("bg-plate-white") ? 'h-[6rem]' : '',
                         plate.classes.includes("bg-plate-black") ? 'h-[4rem]' : '',
+                        plate.classes.includes("plate-eighth") ? 'h-[2.5rem] w-[0.75rem]' : '',
                         "relative"
                     )}
                     style={{
